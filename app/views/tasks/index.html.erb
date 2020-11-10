@@ -2,6 +2,10 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <p><input type="checkbox" <%= "checked" if task.completed %>><%= task.title %>, <%= task.details %></p>
+    <p>
+      <input type="checkbox" <%="checked" if task.completed %> >
+      <%= task.title %>, 
+      <%= task.details %>
+    </p>
   <% end %>
 </ul>
