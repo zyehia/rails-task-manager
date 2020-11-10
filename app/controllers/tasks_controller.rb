@@ -10,7 +10,11 @@ class TasksController < ApplicationController
   def create
     task = Task.new(task_params)
     task.save
-    redirect_to tasks_path
+    redirect_to task_path
+  end
+
+  def edit 
+    @task = Task.find(params[:id])
   end
 
   def show
